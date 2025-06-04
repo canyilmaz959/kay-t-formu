@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kayıtlı Kullanıcılar</title>
+</head>
+<body>
+    <h1>Kullanıcı Listesi</h1>
+
+    {% if kullanicilar %}
+        <ul>
+            {% for k in kullanicilar %}
+                <li><b><u>ID:</u></b> {{ k.id }} <b><u>isim:</u></b> {{ k.ad }} 
+                    <b><u>soyisim:</u></b> {{ k.soyad }} - 
+                    <b><u>email:</u></b> {{ k.email }} 
+                    <b><u>parola:</u></b> {{ k.sifre }} 
+                    <b><u>telefon:</u></b> {{k.telefon}}
+                <a href="{% url 'sil' k.id %}">Sil</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Hiç kullanıcı kaydı bulunamadı.</p>
+    {% endif %}
+
+    <a href="/">Yeni Kayıt Ekle</a>
+</body>
+</html>
