@@ -1,2 +1,2 @@
-# kay-t-formu
-basit bir kayıt sitesi 
+# kayit-formu
+Basit Django Kullanıcı Kayıt ve Listeleme Sistemi – Formdan gelen verileri SQL Server’a kaydedip listeleyen temel proje. Eğitim ve öğrenim amacıyla yapılmıştır.
